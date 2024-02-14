@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteTargetsManager">
+    <targets>
+      <target name="caoyc@csa2.bu.edu:22" type="ssh/sftp" uuid="a393410e-059d-44b5-b689-234f535c8aab">
+        <config>
+          <option name="projectRootOnTarget" value="/home/grad3/caoyc/BoardGames" />
+          <option name="serverName" value="caoyc@csa2.bu.edu:22 password" />
+          <option name="useRsync" value="true" />
+        </config>
+        <ContributedStateBase type="JavaLanguageRuntime">
+          <config>
+            <option name="javaVersionString" value="1.8.0_382" />
+          </config>
+        </ContributedStateBase>
+      </target>
+    </targets>
+  </component>
+</project>

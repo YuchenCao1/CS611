@@ -1,0 +1,102 @@
+@startuml
+
+interface Print_Board {
+  PrintBoard(int[][] pieces)
+}
+interface Get_Board_Size {
+  Get_Boardsize()
+}
+
+
+abstract class Game {
+  Start()
+}
+abstract class BoardGame {
+  Start()
+}
+
+class Play_BoardGames {
+  main()
+}
+
+class TicTacToe {
+  Get_Boardsize()
+  Start()
+}
+
+class Order_and_Chaos {
+  Start()
+}
+
+class Super_TicTacToe {
+  Get_Boardsize()
+  Start()
+}
+
+class Menu {
+  MainMenu()
+  Exit()
+  SubMenu()
+}
+
+class Board {
+  Board(int board_length, int board_width)
+  Reset_Board_Size(int board_length, int board_width)
+  PrintBoard(int[][] pieces)
+  Print_SuperTicTacToe_Board(int main_board_length, int main_board_width, int sub_board_length, int sub_board_width, Piece[] sub_pieces)
+}
+
+class Piece {
+  Piece(int board_length, int board_width)
+  Reset_Pieces(int board_length, int board_width)
+  Update_Pieces(int row, int column, int piece_type)
+}
+
+class Get_user_Answer {
+  Get_y_or_n_Answer()
+}
+
+class Player {
+  Get_Number_of_Players()
+  Get_Number_of_Participating_Player(int team_id, int number_of_players_in_a_team)
+  Reset_Players_Scores()
+  Record_Score(int winner_id)
+  Get_Score(int player_id)
+}
+
+class Team {
+  Get_Number_of_Teams()
+  Get_Number_of_Players_in_Team()
+  Reset_Team_Member_Scores()
+  Record_Score(int winner_team_id, int winner_id)
+  Get_Score(int team_id, int player_id)
+  Get_Team_Score(int team_id)
+}
+
+class Round {
+  ResetRound()
+  Next_Round()
+  Get_Round()
+  Next_Round_Move(int board_length, int board_width)
+  Next_Round_Board_Choose(int main_board_length, int main_board_width)
+  Next_Round_Piece()
+}
+
+class Rules {
+  If_Move_Valid(int[][] pieces, int this_move_row, int this_move_column)
+  If_Choice_Valid(int[][] pieces, int this_move_row, int this_move_column)
+  TicTacToeIf_Over(int[][] pieces, int board_length, int board_width)
+  OrderandChaosIf_Over(int[][] pieces)
+}
+
+
+Board ..|> Print_Board
+TicTacToe ..|> Get_Board_Size
+Super_TicTacToe ..|> Get_Board_Size
+BoardGame <|-- Game
+TicTacToe <|-- BoardGame
+Order_and_Chaos <|-- BoardGame
+Super_TicTacToe <|-- BoardGame
+
+
+@enduml

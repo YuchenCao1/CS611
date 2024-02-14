@@ -1,0 +1,7 @@
+Name/mana/strength/agility/dexterity/starting money/starting experience/number of hands
+Rillifane_Rallathil     1300    750     450     500     2500    9	2
+Segojan_Earthcaller     900     800     500     650     2500    5	3
+Reign_Havoc             800     800     800     800     2500    8	2
+Reverie_Ashels          900     800     700     400     2500    7	2
+Kalabar                 800     850     400     600     2500    6	4
+Skye_Soar               1000    700     400     500     2500    5	10
